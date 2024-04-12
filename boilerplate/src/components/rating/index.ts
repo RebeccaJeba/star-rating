@@ -1,10 +1,13 @@
 import { html, LitElement } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 
 @customElement(`case-rating`)
 export class CaseRating extends LitElement {
+  @property({ type: String })
+  ratingComponentText: string = '';
+
   render() {
-    return html`<div>CaseRating component</div>`;
+    return html`<div>${this.ratingComponentText}</div>`;
   }
 }
 
